@@ -1,10 +1,7 @@
 <?php
 
-<<<<<<< HEAD
 $db_config = get_db_config();
 
-=======
->>>>>>> e1971daf4025b0e1b80ddea9b518efe0653456a1
 return [
 
     /*
@@ -31,11 +28,8 @@ return [
     |
     */
 
-<<<<<<< HEAD
     'default' => $db_config['connetion'],
-=======
-    'default' => env('DB_CONNECTION', 'mysql'),
->>>>>>> e1971daf4025b0e1b80ddea9b518efe0653456a1
+
 
     /*
     |--------------------------------------------------------------------------
@@ -75,17 +69,14 @@ return [
 
         'pgsql' => [
             'driver'   => 'pgsql',
-<<<<<<< HEAD
             'host'     => $db_config['host'],
             'database' => $db_config['database'],
             'username' => $db_config['username'],
             'password' => $db_config['password'],
-=======
             'host'     => env('DB_HOST', 'localhost'),
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
->>>>>>> e1971daf4025b0e1b80ddea9b518efe0653456a1
             'charset'  => 'utf8',
             'prefix'   => '',
             'schema'   => 'public',
