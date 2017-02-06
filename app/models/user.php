@@ -45,4 +45,12 @@ class User extends Model implements AuthenticatableContract,
     public function setPasswordAttribute($password){
         $this->attributes['password'] = bcrypt($password);
     }
+
+    public static function boot(){
+        parent::boot();
+
+        static::creating(function($user){
+           $user->activation_token = str_random(30);
+        });
+    }
 }
