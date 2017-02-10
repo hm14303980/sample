@@ -9,9 +9,16 @@
                     <section>
                         @include('shared.user_info',['user'=>$user])
                     </section>
+                    <section>
+                        @include('shared.status',['user'=>$user])
+                    </section>
                 </div>
             </div>
             <div class="col-md-12">
+                @if(Auth::check())
+                    @include('users._follow_form')
+                @endif
+
                 @if(count($statuses) > 0)
                     <ol class="statuses">
                         @foreach($statuses as $status)
